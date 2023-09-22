@@ -47,7 +47,10 @@
 - **Use Gitflow**
 - **Set Up Postgres Database**
 - **Create Data Models using ERD Diagrams**
--**Review Linters**
+- **Use models to insert data**
+- **Use CRUD methods**
+- **Add methods in models**
+- **Review Linters**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,7 +104,6 @@ To fix the linter use:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Validations And Model Specs**
-- [ ] **Processing data in models**
 - [ ] **Add controllers**
 - [ ] **Deploy**
 
@@ -124,3 +126,11 @@ If you like this project you could clone the repo and work with it or do the cha
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse for providing the necessary resources for this project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
