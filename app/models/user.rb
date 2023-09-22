@@ -5,5 +5,5 @@ class User < ApplicationRecord
 
   def last_three_posts
     posts.limit(3).order(created_at: :desc)
-  end  
+  end
 end
