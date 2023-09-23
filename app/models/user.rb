@@ -5,6 +5,12 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
+  before_create :initialize_post_counter
+
+  def initialize_post_counter
+    self.post_counter ||= 0
+  end
+
   validates :post_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def last_three_posts
