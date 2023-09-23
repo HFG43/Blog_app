@@ -50,6 +50,8 @@
 - **Use models to insert data**
 - **Use CRUD methods**
 - **Add methods in models**
+- **Include validations**
+- **Add Unit test**
 - **Review Linters**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -103,7 +105,6 @@ To fix the linter use:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Validations And Model Specs**
 - [ ] **Add controllers**
 - [ ] **Deploy**
 
