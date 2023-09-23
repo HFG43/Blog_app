@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:author) { double("User", name: 'Bruce Lee', bio: 'Be like the water...') }
+  let(:author) { double('User', name: 'Bruce Lee', bio: 'Be like the water...') }
 
   context 'Creating a new user' do
     it 'The user should have a name' do

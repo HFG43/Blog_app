@@ -23,7 +23,7 @@ RSpec.describe Post, type: :model do
       '
       expect(post).to_not be_valid
     end
-    
+
     it 'At start recent comments should be empty' do
       expect(post.recent_comments).to be_empty
     end
@@ -37,6 +37,5 @@ RSpec.describe Post, type: :model do
       expect(post.comments_counter).to eq(0)
       expect(post.likes_counter).to eq(0)
     end
-
   end
 end
