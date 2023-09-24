@@ -1,15 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  before :each do
-    @author = User.create(name: 'Hernan', bio: 'I am a backend lover')
-    @post = Post.create(author_id: @author.id, title: 'My test', text: 'This is a test')
-  end
+  let(:user) { User.create(name: 'Hernan', bio: 'I am a backend lover') }
+  let(:post) { Post.create(author: user, title: 'My test', text: 'This is a test') }
 
   describe '#update_comment_counter' do
     it 'should return true when creating a comment' do
-      user = User.create(name: 'Commenter', bio: 'I love commenting')
-      comment = Comment.new(user:, post: @post, text: 'This is a comment')
+      commenter = User.create(name: 'Commenter', bio: 'I love commenting')
+      comment = Comment.new(user: commenter, post: post, text: 'This is a comment')
 
       expect(comment.save).to be true
     end
