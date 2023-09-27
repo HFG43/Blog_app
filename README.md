@@ -52,6 +52,9 @@
 - **Add methods in models**
 - **Include validations**
 - **Add Unit test**
+- **Add controllers**
+- **Define Routes**
+- **Include controllers actions**
 - **Review Linters**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -105,7 +108,6 @@ To fix the linter use:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add controllers**
 - [ ] **Deploy**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
