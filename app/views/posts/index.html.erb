@@ -1,6 +1,10 @@
-<p>Here you will see all the posts of a particular user</p>
-<% @posts.each do |post| %>
-  <%= user.name %><br>
-  <%= user.id %>
-  <%= "Number of posts: #{user.posts_counter}"%>
-<% end %>
+<% @posts.each do |post|%>
+  <div>
+    <h2><%= "Post # #{post.id}"%></h2>
+    <p><%=post.text%></p>
+    <span><%="Comments #{post.comments_counter}, Likes #{post.likes_counter}"%></span>
+  </div>
+  <% post.comments.each do |comment|%>
+    <%= "#{comment.author.name}: #{comment.text}"%>
+  <%end%>  
+<%end%>
