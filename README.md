@@ -55,6 +55,7 @@
 - **Add controllers**
 - **Define Routes**
 - **Include controllers actions**
+- **Add test using Rspec gem for all controllers**
 - **Review Linters**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
