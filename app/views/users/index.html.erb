@@ -1,1 +1,8 @@
-<p>Here you will soon see the list of all users</p>
+<% @users.each do |user| %>
+  <div>
+    <span>Photo here</span>
+    <%= user.name %>
+    <%= user.id %>
+    <%= "Number of posts: #{user.posts_counter}"%><br>
+  </div>
+<% end %>

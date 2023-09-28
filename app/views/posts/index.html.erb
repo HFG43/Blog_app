@@ -1,1 +1,6 @@
 <p>Here you will see all the posts of a particular user</p>
+<% @posts.each do |post| %>
+  <%= user.name %><br>
+  <%= user.id %>
+  <%= "Number of posts: #{user.posts_counter}"%>
+<% end %>

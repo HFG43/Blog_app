@@ -1,1 +1,19 @@
-<p>Here you will be able to see all data refered to an user</p>
+<div>
+  <%= @user.name %>
+  <%= "Number of posts: #{@user.posts_counter}"%>
+</div>
+
+<section>
+  <p>Bio</p>
+  <%= @user.bio%>
+</section>
+
+<% @user.posts.each do |post|%>
+  <div>
+    <%= "Post # #{post.id}"%>
+    <%= post.text %>
+    <%= "Comments #{post.comments_counter}, Likes #{post.likes_counter}"%>
+  </div>
+<%end %>
+
+<button type="button">See all posts</button>
