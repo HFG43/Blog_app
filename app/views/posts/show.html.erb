@@ -1,1 +1,13 @@
-<p>Comments & likes of a particular post from a particular user</p>
+<div>
+  <div>
+    <h1><%="Post #{@post.id} by #{@post.author.name}"%></h1>
+    <p><%="Comments: #{@post.comments_counter}, Likes #{@post.likes_counter}"%></p>
+  </div>
+  <p><%=@post.text%></p>  
+</div>
+
+<div>
+  <% @post.comments.each do |comment|%>
+    <%= "#{comment.author.name}: #{comment.text}"%>
+  <%end%>
+</div>
