@@ -1,3 +1,8 @@
+<div>
+  <%= @author.name%>
+  <%= "Number of posts: #{@author.posts_counter}"%>
+</div>
+
 <% @posts.each do |post|%>
   <div>
     <h2><%= "Post # #{post.id}"%></h2>
@@ -8,3 +13,7 @@
     <%= "#{comment.author.name}: #{comment.text}"%>
   <%end%>  
 <%end%>
+
+<div>
+  <button type="button">Pagination</button>
+</div>
