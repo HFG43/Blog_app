@@ -8,6 +8,6 @@
 
 <div class="container">
   <% @post.comments.each do |comment|%>
-    <%= "#{comment.author.name}: #{comment.text}"%>
+    <%= "#{comment.author.name}: #{comment.text}"%><br><br>
   <%end%>
 </div>
