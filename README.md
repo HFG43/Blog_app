@@ -79,6 +79,12 @@ Clone this repository to your desired folder:
 
 ### Usage
 
+To populate the database, in your command line execute:
+
+```sh
+rails db:seed
+```
+
 To run the project, in your command line execute the following:
 
 ```sh
