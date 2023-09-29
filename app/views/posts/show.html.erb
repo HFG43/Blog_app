@@ -1,12 +1,12 @@
-<div>
+<div class="container">
   <div>
     <h1><%="Post #{@post.id} by #{@post.author.name}"%></h1>
-    <p><%="Comments: #{@post.comments_counter}, Likes #{@post.likes_counter}"%></p>
+    <h4><%="Comments: #{@post.comments_counter}, Likes #{@post.likes_counter}"%></h4>
   </div>
   <p><%=@post.text%></p>  
 </div>
 
-<div>
+<div class="container">
   <% @post.comments.each do |comment|%>
     <%= "#{comment.author.name}: #{comment.text}"%>
   <%end%>

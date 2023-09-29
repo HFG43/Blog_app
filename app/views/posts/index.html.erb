@@ -1,19 +1,24 @@
-<div>
-  <%= @author.name%>
-  <%= "Number of posts: #{@author.posts_counter}"%>
+<div class="user_index_container">
+  <div class="container author_photo">Author Pic</div>
+   <div class="container user_index_content">
+    <h2><%= @author.name%></h2>
+    <p><%= "Number of posts: #{@author.posts_counter}"%></p>
+  </div>
 </div>
 
 <% @posts.each do |post|%>
-  <div>
-    <h2><%= "Post # #{post.id}"%></h2>
+  <div class="container">
+    <h3><%= "Post # #{post.id}"%></h3>
     <p><%=post.text%></p>
-    <span><%="Comments #{post.comments_counter}, Likes #{post.likes_counter}"%></span>
+    <h4><%="Comments #{post.comments_counter}, Likes #{post.likes_counter}"%></h4>
   </div>
-  <% post.comments.each do |comment|%>
-    <%= "#{comment.author.name}: #{comment.text}"%>
-  <%end%>  
+  <div class="container">
+    <% post.comments.each do |comment|%>
+      <%= "#{comment.author.name}: #{comment.text}"%>
+    <%end%>
+  </div>  
 <%end%>
 
-<div>
+<div class="button_cont">
   <button type="button">Pagination</button>
 </div>

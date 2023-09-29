@@ -1,21 +1,21 @@
-<div>
-  <%= @user.name %>
-  <%= "Number of posts: #{@user.posts_counter}"%>
+<div class="container user_index_content">
+  <h2><%= @user.name %></h2>
+  <p><%= "Number of posts: #{@user.posts_counter}"%></p>
 </div>
 
-<section>
-  <p>Bio</p>
-  <%= @user.bio%>
+<section class="container">
+  <h3>Bio</h3>
+  <p><%= @user.bio%></p>
 </section>
 
 <% @user.posts.each do |post|%>
-  <div>
-    <%= "Post # #{post.id}"%>
-    <%= post.text %>
-    <%= "Comments #{post.comments_counter}, Likes #{post.likes_counter}"%>
+  <div class="container">
+    <h3><%= "Post # #{post.id}"%></h3>
+    <p><%= post.text %></p>
+    <h4><%= "Comments #{post.comments_counter}, Likes #{post.likes_counter}"%></h4>
   </div>
 <%end %>
 
-<div>
+<div class="button_cont">
   <button type="button">See all posts</button>
 </div>  

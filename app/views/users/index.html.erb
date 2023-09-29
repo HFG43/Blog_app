@@ -1,8 +1,9 @@
 <% @users.each do |user| %>
-  <div>
-    <span>Photo here</span>
-    <%= user.name %>
-    <%= user.id %>
-    <%= "Number of posts: #{user.posts_counter}"%><br>
+  <div class="user_index_container">
+    <div class="container author_photo">Author Pic</div>
+    <div class="container user_index_content">
+      <h2><%= user.name %></h2>
+      <p><%= "Number of posts: #{user.posts_counter}"%></p>
+    </div>
   </div>
 <% end %>
