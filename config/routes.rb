@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     resources :posts, only: [:index, :show]
   end
 
-  root 'users#show'
+  root 'users#index'
 end

@@ -1,1 +1,21 @@
-<p>Here you will be able to see all data refered to an user</p>
+<div class="container user_index_content">
+  <h2><%= @user.name %></h2>
+  <p><%= "Number of posts: #{@user.posts_counter}"%></p>
+</div>
+
+<section class="container">
+  <h3>Bio</h3>
+  <p><%= @user.bio%></p>
+</section>
+
+<% @user.last_three_posts.each do |post|%>
+  <div class="container">
+    <h3><%= link_to "Post # #{post.id}", user_post_path(@user, post.id) %></h3>
+    <p><%= post.text %></p>
+    <h4><%= "Comments #{post.comments_counter}, Likes #{post.likes_counter}"%></h4>
+  </div>
+<%end %>
+
+<div class="button_cont">
+  <%= link_to 'See all posts', user_posts_path(@user), class: 'button' %>
+</button>

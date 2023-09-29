@@ -1,1 +1,9 @@
-<p>Here you will soon see the list of all users</p>
+<% @users.each do |user| %>
+  <div class="user_index_container">
+    <div class="container author_photo">Author Pic</div>
+    <div class="container user_index_content">
+      <h2><%= link_to user.name, user_path(user) %></h2>
+      <p><%= "Number of posts: #{user.posts_counter}"%></p>
+    </div>
+  </div>
+<% end %>
