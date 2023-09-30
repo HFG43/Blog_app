@@ -1,0 +1,7 @@
+<div class="container">
+  <%= form_with model: [@user, @post, @comment], local:true do |form| %>
+    <%= form.label :text, "Leave your comment"%>
+    <%= form.text_area :text, placeholder: "Write your comment here..." , style: 'width:100%' %><br><br>
+    <%= form.submit "Leave your comment", class: "button" %>
+  <% end %>
+</div>
