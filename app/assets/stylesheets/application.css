@@ -71,7 +71,7 @@
 }
 
 .button {
-  margin-top: 5px;
+  margin: 12px;
   padding: 6px;
   background-color: rgb(207, 227, 236);
   border: 1px solid rgb(95, 93, 93);
