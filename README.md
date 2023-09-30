@@ -58,6 +58,8 @@
 - **Add test using Rspec gem for all controllers**
 - **Add views following controller methods**
 - **Give style following wireframes design**
+- **Add forms to add new post and comments**
+- **Add functionality to add likes**
 - **Review Linters**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -117,7 +119,6 @@ To fix the linter use:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add forms to recieve inputs**
 - [ ] **Deploy**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

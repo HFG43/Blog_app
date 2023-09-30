@@ -12,7 +12,8 @@
     <p><%=post.text%></p>
     <h4><%="Comments #{post.comments_counter}, Likes #{post.likes_counter}"%></h4>
   </div>
-  <div class="container">
+
+<div class="container">
     <% post.recent_comments.each do |comment|%>
       <%= "#{comment.author.name}: #{comment.text}"%><br><br>
     <%end%>
@@ -22,3 +23,7 @@
 <div class="button_cont">
   <button type="button">Pagination</button>
 </div>
+
+<div class="button_cont">
+  <%= render partial: 'partials/add_a_post_button'%>
+</button>
