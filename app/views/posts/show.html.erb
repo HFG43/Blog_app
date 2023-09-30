@@ -11,3 +11,7 @@
     <%= "#{comment.author.name}: #{comment.text}"%><br><br>
   <%end%>
 </div>
+
+<div class="button_cont">
+  <%= link_to 'Leave your Comment!', new_user_post_comment_path(@post.author, @post), class: 'button' %>
+</button>
