@@ -1,5 +1,5 @@
 <div class="container">
-  <%= form_with model: @post do |form| %>
+  <%= form_with model: [@user, @post], local:true do |form| %>
     <%= form.label :title, "Post Title"%>
     <%= form.text_field :title, placeholder: "Give your post a title..." %><br><br>
     <%= form.text_area :text, placeholder: "Write your post here..." , style: 'width:100%' %><br><br>

@@ -7,14 +7,30 @@ class PostsController < ApplicationController
   end
 
   def new
-    respond_to do |format|
-      format.html { render :new }
-    end
+    @user = current_user
+    @post = @user.posts.new
   end    
+
+  def create
+    new_post = current_user.posts.new(post_params)
+    if new_post.save
+      flash[:success] = "New post creted successfully"
+      redirect_to user_posts_path(current_user)
+    else
+      flash.now[:error] = "Error: Post could not be saved"
+      render new
+    end  
+  end
 
   def show
     @author = User.find(params[:user_id])
     @author_posts = @author.posts
     @post = @author_posts.find(params[:id])   
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
