@@ -4,6 +4,17 @@
     <h4><%="Comments: #{@post.comments_counter}, Likes #{@post.likes_counter}"%></h4>
   </div>
   <p><%=@post.text%></p>  
+
+  <div>
+    <% liked = @user&.has_liked?(@post) %>
+    <% if @user %>
+      <% if liked %>
+        <%= button_to 'Unlike', user_post_like_path(@user, @post), method: :delete %>
+      <% else %>
+        <%= button_to 'Like', user_post_likes_path(@user, @post, @like), method: :post %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
 
 <div class="container">
@@ -13,5 +24,5 @@
 </div>
 
 <div class="button_cont">
-  <%= link_to 'Leave your Comment!', new_user_post_comment_path(@post.author, @post), class: 'button' %>
-</button>
+  <%= link_to 'Leave your Comment!', new_user_post_comment_path(@post.author, @post), class: "button"%>
+</div>

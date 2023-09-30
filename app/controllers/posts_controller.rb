@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   def index
     return unless params[:user_id]
-
     @author = User.find(params[:user_id])
     @posts = @author.posts
   end
@@ -17,15 +16,16 @@ class PostsController < ApplicationController
       flash[:success] = "New post creted successfully"
       redirect_to user_posts_path(current_user)
     else
-      flash.now[:error] = "Error: Post could not be saved"
+      flash[:error] = "Error: Post could not be saved"
       render new
     end  
   end
 
   def show
+    @user = current_user
     @author = User.find(params[:user_id])
     @author_posts = @author.posts
-    @post = @author_posts.find(params[:id])   
+    @post = @author_posts.find(params[:id])
   end
 
   private
