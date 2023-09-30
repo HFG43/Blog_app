@@ -7,10 +7,10 @@ class User < ApplicationRecord
 
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-  def has_liked?(post)
-    likes.where(post: post).exists?
+  def liked?(post)
+    likes.where(post:).exists?
   end
-  
+
   def last_three_posts
     posts.limit(3).order(created_at: :desc)
   end

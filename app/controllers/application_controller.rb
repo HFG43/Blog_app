@@ -1,13 +1,11 @@
 class ApplicationController < ActionController::Base
   before_action :set_current_user
 
-	def current_user
-		@current_user
-	end
+  attr_reader :current_user
 
-	private
+  private
 
-	def set_current_user
-		@current_user = User.find(1)
-	end
+  def set_current_user
+    @current_user = User.find(1)
+  end
 end

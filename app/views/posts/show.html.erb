@@ -6,7 +6,7 @@
   <p><%=@post.text%></p>  
 
   <div>
-    <% liked = @user&.has_liked?(@post) %>
+    <% liked = @user&.liked?(@post) %>
     <% if @user %>
       <% if liked %>
         <%= button_to 'Unlike', user_post_like_path(@user, @post), method: :delete %>
