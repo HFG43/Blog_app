@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<% @posts.each do |post|%>
+<% @posts.includes(:comments).each do |post|%>
   <div class="container">
     <h3><%= link_to "Post # #{post.id}", user_post_path(@author.id, post.id)%></h3>
     <p><%=post.text%></p>
