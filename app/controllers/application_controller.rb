@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   private
 
+  
   def require_login
     @require_login = 
   end
