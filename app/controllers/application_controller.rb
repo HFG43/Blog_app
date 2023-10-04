@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
-  before_action :current_user
+  before_action :require_login
 
   private
 
-  def current_user
-    @current_user ||= User.first
+  def require_login
+    @require_login = 
   end
 end
