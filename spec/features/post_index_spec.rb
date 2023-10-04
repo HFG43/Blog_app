@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Viewing index post page", type: :feature do
+describe 'Viewing index post page', type: :feature do
   before :each do
     @user = User.create(name: 'David Gilmour', photo: 'https://i.pravatar.cc/200?img=04%02',
                         bio: 'Guitar god!')
@@ -24,28 +24,28 @@ describe "Viewing index post page", type: :feature do
     expect(@user.posts_counter).to eq(2)
   end
 
-  it "should display the post title" do
+  it 'should display the post title' do
     Post.create(author: @user, title: 'Testing 3', text: 'Testing test 3')
 
     visit user_posts_path(@user)
     expect(page).to have_content 'Testing 3'
   end
-  
-  it "should display the post body" do
+
+  it 'should display the post body' do
     Post.create(author: @user, title: 'Testing 4', text: 'Testing the body text, the body text, the body text...')
 
     visit user_posts_path(@user)
     expect(page).to have_content 'the body text, the'
   end
 
-  it "should display the first comment on a post" do
-    first_post = Post.create(author: @user, title: 'First post', text: 'Testing the first post')
+  it 'should display the first comment on a post' do
+    Post.create(author: @user, title: 'First post', text: 'Testing the first post')
 
     visit user_posts_path(@user)
     expect(page).to have_content 'Testing the first post'
   end
 
-  it "should display how many comments the post has" do
+  it 'should display how many comments the post has' do
     second_post = Post.create(author: @user, title: 'Second post', text: 'Testing comments')
     Comment.create(post: second_post, author: @user, text: 'Comment 1')
     Comment.create(post: second_post, author: @user, text: 'Comment 2')
@@ -56,7 +56,7 @@ describe "Viewing index post page", type: :feature do
     expect(second_post.comments_counter).to eq(4)
   end
 
-  it "should display how many likes the post has" do
+  it 'should display how many likes the post has' do
     third_post = Post.create(author: @user, title: 'Second post', text: 'Testing likes')
     Like.create(post: third_post, author: @user)
 
@@ -81,4 +81,4 @@ describe "Viewing index post page", type: :feature do
     click_link 'Create a New Post!'
     expect(current_path).to eq(new_user_post_path(@user))
   end
-end  
+end

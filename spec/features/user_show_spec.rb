@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-describe "Viewing show user page", type: :feature do
+describe 'Viewing show user page', type: :feature do
   before :each do
     @user = User.create(name: 'David Gilmour', photo: 'https://i.pravatar.cc/200?img=04%02',
                         bio: 'Guitar god!')
   end
-  
+
   it "should display the user's profile picture" do
     visit user_path(@user)
     expect(page).to have_css("img[src*='https://i.pravatar.cc/200?img=04%02']")
@@ -30,17 +30,17 @@ describe "Viewing show user page", type: :feature do
     expect(page).to have_content 'Guitar god!'
   end
 
-  it "should show the last three posts" do
+  it 'should show the last three posts' do
     Post.create(author: @user, title: 'First', text: 'Post body 1')
     Post.create(author: @user, title: 'Second', text: 'Post body 2')
     Post.create(author: @user, title: 'Third', text: 'Post body 3')
     Post.create(author: @user, title: 'Fourth', text: 'Post body 4')
     visit user_path(@user)
-    
+
     expect(page).to have_content('Post body 4')
 
     expect(page).not_to have_content('Post body 1')
-  end  
+  end
 
   it "should display a link to see all user's posts" do
     visit user_path(@user)

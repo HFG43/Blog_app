@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-describe "Viewing index users page", type: :feature do
+describe 'Viewing index users page', type: :feature do
   before :each do
     @first_user = User.create(name: 'Eddie Van Halen', photo: 'https://i.pravatar.cc/200?img=05%02',
-                          bio: 'Greatest guitar player!')
+                              bio: 'Greatest guitar player!')
     @second_user = User.create(name: 'Keith Moon', photo: 'https://i.pravatar.cc/200?img=06%02',
-                          bio: 'Best drummer!')
+                               bio: 'Best drummer!')
   end
 
   it 'should display the profile picture of each user' do
