@@ -107,13 +107,19 @@ To fix the linter use:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Hernán Güemes**
 
 - GitHub: [@githubhandle](https://github.com/HFG43)
 - Twitter: [@twitterhandle](https://twitter.com/HFG_43)
 - LinkedIn: [@Hernán Güemes](linkedin.com/in/hernanguemes)
+
+👤 **Ahmed Eid**
+
+- GitHub: [Ahmed Eid](https://github.com/ahmedeid6842)
+- Twitter: [@ahmedeid2684](https://twitter.com/ahmedeid2684)
+- LinkedIn: [Ahmed Eid](https://www.linkedin.com/in/ameid/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
