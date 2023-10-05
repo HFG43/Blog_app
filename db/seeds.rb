@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-# first_user = User.create(name: 'Tom', photo: 'https://i.pravatar.cc/200?img=01%02', bio: 'Teacher from Mexico.')
-# second_user = User.create(name: 'Lilly', photo: 'https://i.pravatar.cc/200?img=02%02', bio: 'Teacher from Poland.')
-# third_user = User.create(name: 'Mike', photo: 'https://i.pravatar.cc/200?img=03%02', bio: 'Teacher from Argentina')
+# first_user = User.create(name: 'Tom', email: 'hernanguemes@hotmail.com', encrypted_password: 'xxxdedxx', photo: 'https://i.pravatar.cc/200?img=01%02', bio: 'Teacher from Mexico.')
+# second_user = User.create(name: 'Lilly', email: 'hxx@xxx.com', encrypted_password: 'xxddedxx',photo: 'https://i.pravatar.cc/200?img=02%02', bio: 'Teacher from Poland.')
+# third_user = User.create(name: 'Mike', email: 'hjdfjf@hotmail.com', encrypted_password: 'xffdedxx', photo: 'https://i.pravatar.cc/200?img=03%02', bio: 'Teacher from Argentina')
 # first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my first post')
 # second_post = Post.create(author: first_user, title: 'Hello again', text: 'This is my second post')
 # third_post = Post.create(author: first_user, title: 'Hello again, again', text: 'This is my third post')

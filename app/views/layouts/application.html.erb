@@ -13,10 +13,10 @@
   <body>
     <section>
       <% if user_signed_in? %>
-        <%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete } %>
+        <%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }, class: "button" %>
       <% else %>
-        <%= link_to 'Sign In', new_user_session_path %>
-        <%= link_to 'Sign Up', new_user_registration_path %>
+        <%= link_to 'Sign In', new_user_session_path, class: "button" %>
+        <%= link_to 'Sign Up', new_user_registration_path, class: "button" %>
       <% end %>
     </section>
     
